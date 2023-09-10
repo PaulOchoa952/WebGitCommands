@@ -11,23 +11,36 @@
 
         <tr>
             <th>Comando</th>
+            <th>Parametros</th>
             <th>Descripción</th>
             <th>Ejemplo</th>
+            
         </tr>
         <tr>
             <td><code>git config --global user.name "[nombre-apellido]"</code></td>
+            <td>--global indica que deseas configurar a nivel global<br>
+            usern.name:En este caso es tu nombre de usuario <br>
+            [nombre-apellido]": Aquí debes reemplazar con tu nombre y apellido reales.
+            </td>
             <td>Establecer un nombre que sea identificable para cuando se revise el historial de versiones</td>
             <td>git init</td>
         </tr>
 
         <tr>
             <td><code>git config --global user.email "[email válido]"</code></td>
+            <td>--global indica que deseas configurar a nivel global<br>
+                usern.email:En este caso es tu email <br>
+                [email]": Aquí debes reemplazar con tu email valido.
+                </td>
             <td>Establecer una dirección de correo electrónico que se asociará a cada commit del historial</td>
             <td>git config --global user.email "paalochoame@ittepic.edu"</td>
         </tr>
 
         <tr>
             <td><code>git config --global -e</code></td>
+            <td>--global:Configurando una opción de Git a nivel global en tu sistema.
+
+                -e: Abre la configuración global de Git en un editor de texto.</td>
             <td>Fichero con la información de configuración de Git</td>
             <td>git config --global -e </td>
         </tr>
@@ -35,14 +48,17 @@
             <th>Inicializacion</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
         <tr>
             <td><code>git init</code></td>
+            <td>El directorio se convierte en un repositorio Git local y se crea un subdirectorio oculto llamado ".git"</td>
             <td>Inicializar un directorio existente como repositorio Git</td>
             <td>git init</td>
         </tr>
         <tr>
             <td><code>git clone [url]</code></td>
+            <td>[url]:url del repositorio existente</td>
             <td>Recuperar un repositorio completo desde una ubicación alojada a través de una URL</td>
             <td>git clone https://github.com/PaulOchoa952/WebGitCommands.git</td>
         </tr>
@@ -50,40 +66,52 @@
             <th>Escenario</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
         <tr>
             <td><code>git status</code></td>
+            <td>Estatus del repositorio</td>
             <td>Mostrar los archivos modificados en el directorio de trabajo, preparados para su próximo commit</td>
             <td>git status</td>
         </tr>
 
         <tr>
             <td><code>git add [fichero]</code></td>
+            <td> Puedes reemplazar [fichero] con el nombre del archivo que deseas agregar al área de preparación</td>
             <td>Añadir un archivo para el próximo commit (escenario)</td>
             <td>git add archivo.txt</td>
         </tr>
         <tr>
             <td><code>git add -u</code></td>
+            <td>-u: Es una bandera que significa "update" (actualizar).</td>
             <td>Actualiza el índice sólo donde ya tiene una entrada que coincide con <pathpec>           </td>
             <td>git add -u </td>
         </tr>
         <tr>
             <td><code>git reset [fichero]</code></td>
+            <td>Debes reemplazar [fichero] con el nombre del archivo que deseas restablecer o revertir a la última versión confirmada.</td>
             <td>Desenvolver un archivo conservando los cambios en el directorio de trabajo</td>
             <td>git reset archivo.txt</td>
         </tr>
         <tr>
             <td><code>git reset −− soft HEADˆ</code></td>
+            <td>--soft: Esta bandera indica que deseas realizar un reset "suave"<br>
+                HEAD^ se refiere al commit anterior al último.
+            </td>
             <td>Desenvolver el último commit conservando los cambios en el directorio local</td>
             <td>git diff --staged</td>
         </tr>
         <tr>
             <td><code>git diff −−staged</code></td>
+            <td>--staged: Esta bandera indica que deseas ver las diferencias entre los 
+                archivos que están en el área de preparación (staging area) y
+                 la última confirmación (commit). </td>
             <td>Diferencia de lo que se ha puesto en escena pero aún no se ha hecho commit</td>
             <td>git diff --staged </td>
         </tr>
         <tr>
             <td><code>git commit -m “[mensaje descriptivo]” </code></td>
+            <td>[mensaje descriptivo]:Esta sera la descripción del commit</td>
             <td>Hacer un nuevo commit con su respecta descripción</td>
             <td>git commit -m "Agregando nuevos cambios al proyecto"</td>
         </tr>
@@ -91,41 +119,53 @@
             <th>Ramas</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
 
         <tr>
             <td><code>git branch</code></td>
+            <td></td>
             <td>Listar las ramas y aparecerá un * al lado de la rama actualmente activa</td>
             <td>git branch main,master</td>
         </tr>
         <tr>
             <td><code>git branch [nombre de la rama]</code></td>
+            <td>[nombre de la rama]:aqui pondras el nombre que llevara tu nueva rama</td>
             <td>Crear una nueva rama en el commit actual</td>
             <td>git branch <br>feature/nueva-funcionalidad</td>
         </tr>
         <tr>
             <td><code>git checkout -b [nombre de la rama] </code></td>
+            <td>[nombre de la rama]:aqui pondras el nombre de la rama</td>
             <td>Creación y desplazamiento a la rama indicada
             </td>
             <td>git checkout master</td>
         </tr>
         <tr>
             <td><code>git branch -d [nombre de la rama]</code></td>
+            <td>[nombre de la rama]:aqui pondras el nombre de la rama</td>
+
             <td>Elimina la rama indicada</td>
             <td>git branch -d master</td>
         </tr>
         <tr>
             <td><code>git checkout </code></td>
+            <td></td>
             <td>Cambiar a otra rama y comprobarla en el directorio de trabajo</td>
             <td>git checkout rama2</td>
         </tr>
         <tr>
             <td><code>git checkout −− . </code></td>
+            <td>--: Esta doble barra guion (--) se utiliza para separar las opciones de los comandos <br>
+                .: El punto (.) representa el directorio actual.
+            </td>
             <td>Retomar el estado del último commit</td>
             <td>git checkout -- .</td>
         </tr>
         <tr>
             <td><code>git merge [rama]</code></td>
+            <td>[nombre de la rama]:aqui pondras el nombre de la rama</td>
+
             <td>Fusionar el historial de la rama especificada en la actual</td>
             <td>git merge ochoaramos</td>
         </tr>
@@ -133,10 +173,12 @@
             <th>Inspeccionar y comparar</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
 
         <tr>
             <td><code>git log</code></td>
+            <td></td>
             <td>Mostrar todos los commits en el historial de la rama actua</td>
             <td>git log</td>
         </tr>
@@ -145,9 +187,11 @@
             <th>Seguimiento de los cambios</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
         <tr>
             <td><code>git rm [fichero] </code></td>
+            <td>[fichero]:Aqui va el nombre del fichero que deseas modificar</td>
             <td>Eliminar el archivo del proyecto y preparar la eliminación para el commit</td>
             <td>git rm mi-archivo.txt
             </td>
@@ -156,9 +200,14 @@
             <th>Ignorando los patrones</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
         <tr>
             <td><code>git config –global core.excludesfile [fichero]</code></td>
+            <td>--global: Esta bandera indica que deseas configurar la opción a nivel global
+                <br>core.excludesfile:Especifica la ubicacion del archivo.
+                <br>[fichero]:ruta completa del archivo a remplazar
+            </td>
             <td>Git ignora ese fichero para todos los repositorios</td>
             <td>git config --global core.excludesfile ~/.gitignore_global</td>
         </tr>
@@ -167,31 +216,44 @@
             <th>Compartir y actualizar</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
         <tr>
             <td><code>git remote add [alias] [url]</code></td>
+            <td>[alias]: Debes reemplazar [alias] con un nombre corto o alias <br>
+                [url]: Debes reemplazar [url] con la URL del repositorio remoto al que deseas conectarte</td>
             <td>Añadir una URL de git como alias</td>
             <td>git remote add origin https://github.com/tu-usuario/tu-repositorio.git </td>
         </tr>
 
         <tr>
             <td><code>git fetch [alias]  </code></td>
+            <td>[alias]: Debes reemplazar [alias] con un nombre corto o alias</td>
             <td>Obtener todas las ramas de ese Git remoto</td>
             <td>git fetch origin</td>
         </tr>
 
         <tr>
             <td><code>git merge [alias]/[rama]</code></td>
+            <td>[alias]: Debes reemplazar [alias] con un nombre corto o alias
+                <br>
+                [rama]:Nombre de la rama deseada
+            </td>
             <td>Fusionar una rama remota en su rama actual para actualizarla</td>
             <td>git merge origin/main </td>
         </tr>
         <tr>
             <td><code>git push [alias] [rama]</code></td>
+            <td>[alias]: Debes reemplazar [alias] con un nombre corto o alias
+                <br>
+                [rama]:Nombre de la rama deseada
+            </td>
             <td>Transmitir los commits de la rama local a la rama del repositorio remoto</td>
             <td>git push origin main </td>
         </tr>
         <tr>
             <td><code>git pull</code></td>
+            <td></td>
             <td>Obtener y fusionar los commits de la remota a la rama local</td>
             <td>git pull origin main</td>
         </tr>
@@ -199,21 +261,32 @@
             <th>Rescribir la historia</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
+        
         <tr>
             <td><code>git rebase [rama] </code></td>
+            <td>[rama]:Nombre de la rama especificada</td>
             <td>Aplicar cualquier commit de la rama actual por delante de la especificada</td>
             <td>git checkout mi-rama-feature  <br>git rebase main</td>
         </tr>
+
         <tr>
             <td><code>git reset −−hard [commit]</code></td>
+            <td>--hard: Esta bandera indica que deseas realizar un reset "duro"<br>
+                [commit]: Debes reemplazar [commit] con el identificador (hash) del commit al que deseas retroceder</td>
             <td>Despejar el escenario y reescribir el árbol de trabajo a partir del commit específicado</td>
             <td>git reset --hard abc123</td>
         </tr>
 
     </table>
     <!-- Aquí agregamos la conclusión -->
-    <p id="conclusion">En resumen, estos son algunos de los comandos esenciales de Git que te ayudarán en tu flujo de trabajo de control de versiones. Es importante comprender cómo y cuándo usarlos para mantener un historial de versiones limpio y eficiente en tus proyectos.</p>
+    
+</div>
+<div id="conclusion-container">
+    <h2>Conclusión</h2>
+    <p id="conclusion">En resumen, estos son algunos de los comandos esenciales de Git que te ayudarán en tu flujo de trabajo de control de versiones. 
+        <br>Es importante comprender cómo y cuándo usarlos para mantener un historial de versiones limpio y eficiente en tus proyectos.</p>
 </div>
 </body>
 

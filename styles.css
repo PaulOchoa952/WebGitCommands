@@ -48,16 +48,19 @@ code {
     border-radius: 3px;
 }
 
-#contenedor {
-    max-width: 90%; /* Puedes ajustar este valor según tus necesidades */
-    margin: 0 auto; /* Centra el contenedor horizontalmente en la página */
+
+
+#conclusion-container {
+    text-align: center; /* Centra el contenido horizontalmente */
+    background-color: #f4f4f4;
+    padding: 5px;
+    border-left: 5px solid #333;
+    border-right: 5px solid #333;
 }
 
-#conclusion {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-    width: 80%; /* Establece el ancho del párrafo al 100% del contenedor */
+#conclusion h2 {
+    margin: 0; /* Elimina el margen superior del título */
 }
+
+
 
