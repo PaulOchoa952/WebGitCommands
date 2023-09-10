@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/assets/hola.jpg'); /* Cambia 'ruta/de/tu/imagen.jpg' por la URL o ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para que cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0;
+    padding: 10px;
+    box-sizing: border ;
+}
+
+
+h1 {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin: 0;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9); /* Cambia el color de fondo aquí */
+}
+
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+code {
+    background-color: #f9f9f9;
+    padding: 2px 4px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#contenedor {
+    max-width: 90%; /* Puedes ajustar este valor según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor horizontalmente en la página */
+}
+
+#conclusion {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    width: 80%; /* Establece el ancho del párrafo al 100% del contenedor */
+}
+
